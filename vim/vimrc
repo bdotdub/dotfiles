@@ -21,6 +21,7 @@ set autoindent
 set smartindent
 
 " Line numbers
+set ruler
 set number
 :hi LineNr ctermfg=DarkGrey
 
