@@ -1,6 +1,7 @@
 " Syntax Highlighting
 syntax enable
 au BufNewFile,BufRead *.textile setf textile
+au BufNewFile,BufRead *.haml setf ruby
 
 " Search
 set showmatch
@@ -48,6 +49,8 @@ nnoremap <F9> :!
 vmap <F9> <C-C><F1>
 omap <F9> <C-C><F1>
 map! <F9> <C-C><F1>
+
+map <C-c> :!
 
 " Toggle highlight search with F10
 map <F10> :set hlsearch!<CR>
