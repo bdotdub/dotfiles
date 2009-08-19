@@ -107,6 +107,7 @@ endfunction
 map :bk :call Bk(1)
 map <F12> :call Bk(1)<CR>
 map <leader>k :call Bk(1)<CR>
+map <leader>l <C-w>c
 
 " Minibufferexplorer config
 let g:miniBufExplMapWindowNavVim = 1
