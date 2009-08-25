@@ -34,6 +34,7 @@ set backspace=indent,eol,start
 " Other useful tips: http://items.sjbach.com/319/configuring-vim-right
 set hidden
 set history=1000
+set so=2
 
 nnoremap ' `
 nnoremap ` '
@@ -66,12 +67,14 @@ imap <F11> <ESC><F11>i
 " Shortcuts to move between buffers
 map [ :bp<cr>
 map ] :bn<cr>
+map :E :e<cr>
+map :W :w<cr>
 
 "Changing directory to match current buffer
 "START
 function! CHANGE_CURR_DIR()
-  let _dir = expand("%:p:h")
-    exec "cd " . _dir
+  let _dir = escape(expand("%:p:h"), " ")
+  exec "cd " . _dir
   unlet _dir
 endfunction
 
@@ -85,7 +88,7 @@ imap `` <esc>
 imap ;; <esc>
 
 "delete the buffer; keep windows
-function Bk(kwbdStage)
+function! Bk(kwbdStage)
 if(a:kwbdStage == 1)
   let g:kwbdBufNum = bufnr("%")
   let g:kwbdWinNum = winnr()
@@ -104,10 +107,15 @@ else
 endif
 endfunction
 
+function! BwongCloseBufferAndWindow()
+  :call Bk(1)
+  wincmd c
+endfunction
+
 map :bk :call Bk(1)
 map <F12> :call Bk(1)<CR>
 map <leader>k :call Bk(1)<CR>
-map <leader>l <C-w>c
+map <leader>j :call BwongCloseBufferAndWindow()<CR>
 
 " Minibufferexplorer config
 let g:miniBufExplMapWindowNavVim = 1
