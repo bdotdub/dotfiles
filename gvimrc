@@ -1,4 +1,5 @@
 colorscheme candycode
+set transparency=8
 
 " Size
 set columns=150

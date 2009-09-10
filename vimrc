@@ -1,6 +1,7 @@
 " Syntax Highlighting
 syntax enable
 au BufNewFile,BufRead *.textile setf textile
+au BufNewFile,BufRead *.cap setf ruby
 au BufNewFile,BufRead *.haml setf ruby
 
 " Search
@@ -28,6 +29,7 @@ set number
 
 " Misc
 set wildignore=*.o
+set wildmenu
 set nocp
 set backspace=indent,eol,start
 
