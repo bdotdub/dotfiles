@@ -9,6 +9,7 @@ set showmatch
 set ignorecase
 set incsearch
 set smartcase
+set listchars=trail:*
 
 :hi Search guibg=LightBlue
 :hi Search ctermbg=LightGrey
