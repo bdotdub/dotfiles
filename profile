@@ -19,6 +19,8 @@ alias findps='ps aux | grep'
 alias :e='vi'
 
 if [ -d ~/.custom ]; then
-  source ~/.custom/*
+  for i in ~/.custom/*;
+    do source $i;
+  done
 fi
 
