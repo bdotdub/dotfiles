@@ -48,7 +48,6 @@ let mapleader="'"
 set backupdir=~/.vim/swp
 set directory=~/.vim/swp
 
-
 " F{n} shortcuts
 nnoremap <F9> :!
 vmap <F9> <C-C><F1>
