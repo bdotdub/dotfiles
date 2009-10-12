@@ -115,6 +115,11 @@ function! BwongCloseBufferAndWindow()
   wincmd c
 endfunction
 
+function! ClearExtraneousSpaces()
+  :silent! %s/^\s\+$//
+  :silent! %s/\s\+$//
+endfunction
+
 map :bk :call Bk(1)
 map <F12> :call Bk(1)<CR>
 map <leader>k :call Bk(1)<CR>

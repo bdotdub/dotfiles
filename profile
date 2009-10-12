@@ -21,6 +21,7 @@ if [ -n `which git` ]; then
   alias gc='git commit'
   alias gco='git checkout'
   alias gd='git diff'
+  alias gp='git push'
   alias gst='git status'
 fi
 if [ -d ~/.custom ]; then
