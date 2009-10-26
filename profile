@@ -24,6 +24,17 @@ if [ -n `which git` ]; then
   alias gp='git push'
   alias gst='git status'
 fi
+
+if [ -d ~/Development ]; then
+  for type in `ls $HOME/Development`; do
+    lowercased_type=`echo $type | tr A-Z a-z`
+    dev_dir="$HOME/Development/$type"
+    if [ -d "$dev_dir" ]; then
+      alias "dev$lowercased_type"="cd $dev_dir"
+    fi
+  done
+fi
+
 if [ -d ~/.custom ]; then
   for i in ~/.custom/*;
     do source $i;
