@@ -87,7 +87,6 @@ autocmd BufEnter * call CHANGE_CURR_DIR()
 "Escape from insert mode
 ":map <S-space> i
 ":imap <S-space> <esc>
-imap `` <esc>
 imap ;; <esc>
 
 "delete the buffer; keep windows
@@ -113,6 +112,11 @@ endfunction
 function! BwongCloseBufferAndWindow()
   :call Bk(1)
   wincmd c
+endfunction
+
+function! BwongToggleIndentSettings()
+  :set smartindent!
+  :set autoindent!
 endfunction
 
 function! ClearExtraneousSpaces()
