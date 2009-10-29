@@ -1,5 +1,6 @@
 export EDITOR=vim
 export PAGER="less -s"
+export PS1="\h:\W \u\$ "
 
 BOX=`uname`
 
@@ -13,6 +14,7 @@ fi
 alias cl='clear'
 alias l='ls -al'
 alias t='touch tmp/restart.txt'
+alias j=jobs
 alias gh='history | grep'
 alias findps='ps aux | grep'
 alias top='top -o cpu'
