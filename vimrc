@@ -49,23 +49,18 @@ set backupdir=~/.vim/swp
 set directory=~/.vim/swp
 
 " F{n} shortcuts
-nnoremap <F9> :!
-vmap <F9> <C-C><F1>
-omap <F9> <C-C><F1>
-map! <F9> <C-C><F1>
-
 map <C-c> :!
 
 " Toggle highlight search with F10
-map <F10> :set hlsearch!<CR>
-imap <F10> <ESC>:set hlsearch!<CR>a
+map <Leader>hh :set hlsearch!<CR>
+imap <Leader>hh <ESC>:set hlsearch!<CR>a
 
-map <F11> :if exists("syntax_on") <Bar>
+map <Leader>ss :if exists("syntax_on") <Bar>
   \   syntax off <Bar>
   \ else <Bar>
   \   syntax enable <Bar>
   \ endif <CR>
-imap <F11> <ESC><F11>i
+imap <Leader>ss <ESC><Leader>ssi
 
 " Shortcuts to move between buffers
 map [ :bp<cr>
@@ -125,9 +120,9 @@ function! ClearExtraneousSpaces()
 endfunction
 
 map :bk :call Bk(1)
-map <F12> :call Bk(1)<CR>
 map <leader>k :call Bk(1)<CR>
 map <leader>j :call BwongCloseBufferAndWindow()<CR>
+map <Leader><Tab> :call ClearExtraneousSpaces()<CR>
 
 " Minibufferexplorer config
 let g:miniBufExplMapWindowNavVim = 1
@@ -139,4 +134,8 @@ let g:treeExplWinSize = 35
 
 " Automatically close curly brace on enter
 inoremap {<CR>  {<CR>}<Esc>O
+
+nmap <D-/> ,c<space>
+vmap <D-/> ,c<space>
+imap <D-/> <C-O>,c<space>
 
