@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'ftools'
 
-repo_dir      = File.dirname(__FILE__)
+repo_dir      = File.expand_path(File.dirname(__FILE__))
 home_dir      = ENV['HOME']
 config_backup = File.join home_dir, '.dotfiles'
 
