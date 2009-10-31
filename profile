@@ -28,6 +28,7 @@ if [ -n `which git` ]; then
   alias gc='git commit'
   alias gco='git checkout'
   alias gd='git diff'
+  alias gdc='git diff --cached'
   alias gp='git push'
   alias gst='git status'
   alias gstash='git stash'
