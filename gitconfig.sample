@@ -27,4 +27,4 @@
   df = diff
   lg = log -p
 [core]
-  excludesfile = /Users/bwong/.gitignore
+  excludesfile = <HOME_DIR>/.gitignore
