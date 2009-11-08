@@ -32,7 +32,7 @@ set server = talk.google.com
 
 # Set 'ignore_self_presence' to 1 if you do not want to see your own
 # presence in your roster (default: 0).
-set ignore_self_presence = 1
+# set ignore_self_presence = 1
 
 # SSL options:
 # Set ssl non-zero to use SSL (this also sets the default port to 5223).
@@ -160,7 +160,7 @@ set logging_ignore_status = 1
 # mcabber can store the list of unread messages in a state file,
 # so that the message flags are set back at next startup.
 # Note that 'logging' must be enabled for this feature to work.
-#set statefile = ~/.mcabber/mcabber.state
+set statefile = ~/.mcabber/mcabber.state
 
 # You can specify a maximum number of data blocks per buffer (1 block contains
 # about 8kB).  The default is 0 (unlimited).  If set, this value must be > 2.
@@ -400,7 +400,7 @@ set escdelay = 50
 # - 1: "name <jid/resource>" (name is omitted if same as the jid)
 # - 2: "name/resource" (if the name is the same as the jid, use <jid/res>)
 # - 3: "name" (if the name is the same as the jid, use <jid/res>)
-#set buddy_format = 2
+set buddy_format = 1
 #
 # Time format:
 # - 0: (default) Date and time
