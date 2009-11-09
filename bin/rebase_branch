@@ -1,0 +1,33 @@
+#!/bin/bash
+
+if [[ $1 = '-v' ]]; then
+  echo Usage: rebase_branch [branch=master]
+  exit
+fi
+
+# MAIN_BRANCH will use the first parameter or default to 'master'
+MAIN_BRANCH=${1-master}
+BRANCH=`git symbolic-ref HEAD | sed 's#refs/heads/##'`
+
+BRANCH_HAS_DIRTY_FILES=`git diff-index --name-only HEAD --`
+
+if [[ $MAIN_BRANCH = $BRANCH ]]; then
+  echo "You are already on the $BRANCH branch"
+  exit
+fi
+
+echo "Rebasing branch $BRANCH using $MAIN_BRANCH"
+
+if [[ $BRANCH_HAS_DIRTY_FILES ]]; then
+  git stash
+fi
+
+git checkout dev
+git pull
+git checkout $BRANCH
+git rebase dev
+
+if [[ $BRANCH_HAS_DIRTY_FILES ]]; then
+  git stash pop
+fi
+

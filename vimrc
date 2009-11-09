@@ -3,6 +3,7 @@ syntax enable
 au BufNewFile,BufRead *.textile setf textile
 au BufNewFile,BufRead *.cap setf ruby
 au BufNewFile,BufRead *.haml setf ruby
+au BufNewFile,BufRead *.md setf mkd
 
 " Search
 set showmatch
@@ -28,6 +29,10 @@ set smartindent
 set ruler
 set number
 :hi LineNr ctermfg=DarkGrey
+
+" Make
+map <D-r> :make<CR>
+au FileType mkd set makeprg=/opt/local/bin/maruku\ %
 
 " Misc
 set wildignore=*.o
