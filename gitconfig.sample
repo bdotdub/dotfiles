@@ -1,5 +1,5 @@
 [user]
-  email = <EMAIL ADDRESS>
+  email = <EMAIL_ADDRESS>
   name = Benny Wong
 [github]
   user = bdotdub
@@ -27,4 +27,4 @@
   df = diff
   lg = log -p
 [core]
-  excludesfile = /Users/bwong/.gitignore
+  excludesfile = <HOME_DIR>/.gitignore
