@@ -11,14 +11,24 @@ else
   alias ls='ls --color=auto'
 fi
 
+# General Stuff
 alias cl='clear'
 alias l='ls -al'
 alias t='touch tmp/restart.txt'
 alias j=jobs
+alias top='top -o cpu'
+
+# Vim
+alias v=vi
+alias :e=vi
+
+# Grep Soda
+alias gi='grep -i'
+alias gr='grep -r'
+alias gri='grep -ri'
+alias gv='grep -v'
 alias gh='history | grep'
 alias findps='ps aux | grep'
-alias top='top -o cpu'
-alias :e='vi'
 
 if [ -n `which git` ]; then
   # There must be a better way to do this
