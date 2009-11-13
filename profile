@@ -7,6 +7,7 @@ BOX=`uname`
 if [ $BOX == "Darwin" ]
 then
   alias ls='ls -G'
+  alias top='top -o cpu'
 else
   alias ls='ls --color=auto'
 fi
@@ -16,7 +17,6 @@ alias cl='clear'
 alias l='ls -al'
 alias t='touch tmp/restart.txt'
 alias j=jobs
-alias top='top -o cpu'
 
 # Vim
 alias v=vi
