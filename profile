@@ -39,7 +39,10 @@ if [ -n `which git` ]; then
   alias gco='git checkout'
   alias gd='git diff'
   alias gdc='git diff --cached'
+  alias gl='git log'
   alias gp='git push'
+  alias gpl='git pull'
+  alias grb='git rebase'
   alias gst='git status'
   alias gstash='git stash'
 fi
