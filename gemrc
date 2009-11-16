@@ -1,9 +1,9 @@
---- 
+---
 gem: --no-ri --no-rdoc
 :benchmark: false
 :verbose: true
 :update_sources: true
-:sources: 
+:sources:
 - http://gemcutter.org
 - http://gems.rubyforge.org/
 :backtrace: false
