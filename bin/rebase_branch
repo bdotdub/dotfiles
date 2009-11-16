@@ -22,10 +22,10 @@ if [[ $BRANCH_HAS_DIRTY_FILES ]]; then
   git stash
 fi
 
-git checkout dev
+git checkout $MAIN_BRANCH
 git pull
 git checkout $BRANCH
-git rebase dev
+git rebase $MAIN_BRANCH
 
 if [[ $BRANCH_HAS_DIRTY_FILES ]]; then
   git stash pop

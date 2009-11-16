@@ -1,5 +1,6 @@
 " Syntax Highlighting
 syntax enable
+au BufNewFile,BufRead *.ru setf ruby
 au BufNewFile,BufRead *.textile setf textile
 au BufNewFile,BufRead *.cap setf ruby
 au BufNewFile,BufRead *.haml setf ruby
