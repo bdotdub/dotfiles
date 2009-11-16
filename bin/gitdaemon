@@ -1,0 +1,17 @@
+#!/usr/bin/ruby
+
+git_daemon_dir = ENV['GITDAEMONDIR']
+if git_daemon_dir.nil?
+  puts "GITDAEMONDIR environment variable not set"
+  exit 1
+end
+
+repos = `ls #{git_daemon_dir}`.split
+receive_pack = ARGV[0] && ARGV[0] == '-r' ? '' :  '--enable=receive-pack'
+if system("git daemon --base-path=#{git_daemon_dir} --export-all --verbose #{receive_pack} &")
+  puts "git daemon started"
+  puts "Available repos:"
+  repos.each do |repo|
+    puts "    #{git_daemon_dir}/#{repo}"
+  end
+end

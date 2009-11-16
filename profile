@@ -62,9 +62,3 @@ if [ -d ~/.custom ]; then
     do source $i;
   done
 fi
-
-if [ -n $GITDAEMONDIR ]; then
-  # Git daemon. GITDAEMONDIR needs to be set
-  alias gitdaemon_readonly="git daemon --base-path=`echo $GITDAEMONDIR` --export-all --verbose &"
-  alias gitdaemon="git daemon --base-path=$GITDAEMONDIR --export-all --verbose --enable=receive-pack &"
-fi
