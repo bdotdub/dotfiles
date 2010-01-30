@@ -11,6 +11,12 @@ if git_daemon_dir.nil?
   exit 1
 end
 
+if ARGV[0] && ARGV[0] == '-k'
+  `ps aux | grep 'git.daemon' | grep -v grep | awk '{ print $2 }' | xargs kill`
+  puts 'git-daemons killed!'
+  exit
+end
+
 repos = `ls #{git_daemon_dir}`.split
 receive_pack = ARGV[0] && ARGV[0] == '-r' ? '' :  '--enable=receive-pack'
 if system("git daemon --base-path=#{git_daemon_dir} --export-all --verbose #{receive_pack} &")
@@ -22,7 +28,8 @@ if system("git daemon --base-path=#{git_daemon_dir} --export-all --verbose #{rec
 end
 
 def usage
-  puts "gitdaemon [-h|--help|-r]"
+  puts "gitdaemon [-h|--help|-k|-r]"
+  puts "  -k            Kill daemons (if running)"
   puts "  -r            Start readonly"
   puts "  -h, --help    Show this message"
   exit 0
