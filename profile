@@ -1,6 +1,6 @@
 export EDITOR=vim
 export PAGER="less -s"
-export PS1="\h:\W \u\$ "
+export PS1="\h:\W\$(__git_ps1) \u\$ "
 
 BOX=`uname`
 
@@ -34,7 +34,7 @@ if [ -n `which git` ]; then
   # There must be a better way to do this
   alias g='git'
   alias ga='git add'
-  alias gb='git branch'
+  alias gbr='git branch'
   alias gc='git commit'
   alias gco='git checkout'
   alias gd='git diff'
