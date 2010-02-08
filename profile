@@ -49,6 +49,7 @@ if [ -n `which git` ]; then
 fi
 
 if [ -d ~/Development ]; then
+  alias dev="cd $HOME/Development"
   for type in `ls $HOME/Development`; do
     lowercased_type=`echo $type | tr A-Z a-z`
     dev_dir="$HOME/Development/$type"
