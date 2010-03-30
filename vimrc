@@ -142,3 +142,11 @@ nmap <D-/> ,c<space>
 vmap <D-/> ,c<space>
 imap <D-/> <C-O>,c<space>
 
+if has("multi_byte")
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8 bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+endif
