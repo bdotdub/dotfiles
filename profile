@@ -46,6 +46,8 @@ if [ -n `which git` ]; then
   alias grb='git rebase'
   alias gst='git status'
   alias gstash='git stash'
+
+  alias clone='git clone'
 fi
 
 if [ -d ~/Development ]; then
