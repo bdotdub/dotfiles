@@ -19,15 +19,24 @@ fi
 echo "Rebasing branch $BRANCH using $MAIN_BRANCH"
 
 if [[ $BRANCH_HAS_DIRTY_FILES ]]; then
+  echo "Stashing uncommitted changes"
   git stash
 fi
 
+echo "Checkout $MAIN_BRANCH"
 git checkout $MAIN_BRANCH
+
+echo "Pulling..."
 git pull
+
+echo "Re-checking out $BRANCH"
 git checkout $BRANCH
+
+echo "All your rebase is belong to Wong"
 git rebase $MAIN_BRANCH
 
 if [[ $BRANCH_HAS_DIRTY_FILES ]]; then
+  echo "Unstashing the changes"
   git stash pop
 fi
 
