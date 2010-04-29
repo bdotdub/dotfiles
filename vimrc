@@ -6,6 +6,7 @@ au BufRead,BufNewFile *.md setf mkd
 au BufRead,BufNewFile *.pp setf puppet
 au BufRead,BufNewFile *.ru setf ruby
 au BufRead,BufNewFile *.textile setf textile
+au BufRead,BufNewFile Capfile setf ruby
 
 " Search
 set showmatch
