@@ -1,0 +1,23 @@
+require 'irb/completion'
+
+# Require custom irbrc
+custom_irbrc = File.join(File.dirname(__FILE__), '.irb')
+if File.exists?(custom_irbrc)
+  Dir.glob("#{custom_irbrc}/*").each do |file|
+    require file
+  end
+end
+
+ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
+
+class Fixnum
+  def to_hex
+    self.to_s(16)
+  end
+end
+
+class String
+  def to_hex
+    self.to_i.to_s(16)
+  end
+end
