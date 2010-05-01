@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 require 'ftools'
 
+# This script sucks
+
 home_dir      = ENV['HOME']
 config_backup = File.join home_dir, '.dotfiles'
 
@@ -22,6 +24,7 @@ Dir.glob(File.join(config_backup, '.*')).each do |dot_config_file|
     backup_file_full_path = File.readlink backup_file_full_path
   end
   puts "Moving backup file: #{backup_file_full_path} => #{dot_config_file_full_path}"
-  File.symlink backup_file_full_path, dot_config_file_full_path
+  File.mv backup_file_full_path, dot_config_file_full_path
 end
 
+FileUtils.rmdir config_backup

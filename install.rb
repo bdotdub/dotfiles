@@ -6,13 +6,15 @@ home_dir      = ENV['HOME']
 config_backup = File.join home_dir, '.dotfiles'
 
 # Move into this dir
-Dir.chdir repo_dir
+Dir.chdir File.join repo_dir, 'dotfiles'
 
-ignore = ['install.rb', 'uninstall.rb', 'README.md', '.git', '.gitignore', '.gitignore.sample']
-Dir.glob('*').reject{|file| ignore.include?(file) }.each do |config_file|
-  dot_config_file           = ".#{config_file}"
+puts `pwd`
+Dir.glob('.*').each do |config_file|
+  next if ['.', '..' ].include?(config_file)
+
+  dot_config_file           = config_file
   dot_config_file_full_path = File.join home_dir, dot_config_file
-  config_file_full_path     = File.join repo_dir, config_file
+  config_file_full_path     = File.join repo_dir, 'dotfiles', config_file
 
   if File.exists?(dot_config_file_full_path)
     if File.symlink?(dot_config_file_full_path) and File.identical?(config_file_full_path, dot_config_file_full_path)
