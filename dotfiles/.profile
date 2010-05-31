@@ -30,6 +30,9 @@ alias gv='grep -v'
 alias gh='history | grep'
 alias findps='ps aux | grep'
 
+# Misc
+alias whatsmyip='curl "http://code.bwong.net/tools/ip.php?f=plain" && echo'
+
 if [ -n `which git` ]; then
   # There must be a better way to do this
   alias g='git'
