@@ -2,4 +2,4 @@ irb/*
 mcabber/mcabberrc
 mcabber/mcabber.state
 mcabber/logs/*
-vim/swp/*
+dotfiles/vim/swp/*
