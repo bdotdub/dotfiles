@@ -45,6 +45,7 @@ if [ -n `which git` ]; then
   alias gl='git log'
   alias gpush='git push'
   alias gpl='git pull --rebase'
+  alias gpr='git pretty'
   alias gpull='git pull'
   alias grb='git rebase'
   alias gst='git status'
