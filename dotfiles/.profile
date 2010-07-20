@@ -17,6 +17,7 @@ alias cl='clear'
 alias l='ls -al'
 alias t='touch tmp/restart.txt'
 alias j=jobs
+alias scrd='screen -rd'
 
 # Vim
 alias v=vi
