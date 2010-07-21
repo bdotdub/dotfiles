@@ -6,7 +6,7 @@ home_dir      = ENV['HOME']
 config_backup = File.join home_dir, '.dotfiles'
 
 # Move into this dir
-Dir.chdir File.join repo_dir, 'dotfiles'
+Dir.chdir File.join repo_dir, 'home'
 
 puts `pwd`
 Dir.glob('.*').each do |config_file|
@@ -14,7 +14,7 @@ Dir.glob('.*').each do |config_file|
 
   dot_config_file           = config_file
   dot_config_file_full_path = File.join home_dir, dot_config_file
-  config_file_full_path     = File.join repo_dir, 'dotfiles', config_file
+  config_file_full_path     = File.join repo_dir, 'home', config_file
 
   if File.exists?(dot_config_file_full_path)
     if File.symlink?(dot_config_file_full_path) and File.identical?(config_file_full_path, dot_config_file_full_path)
