@@ -1,0 +1,31 @@
+#!/bin/sh
+
+if [ $# -ne 2 ];
+then
+    echo "USAGE: git reauthor FROM_EMAIL TO_EMAIL"
+    exit 1
+fi
+
+FROM_EMAIL=$1 TO_EMAIL=$2 git filter-branch --env-filter '
+
+an="$GIT_AUTHOR_NAME"
+am="$GIT_AUTHOR_EMAIL"
+cn="$GIT_COMMITTER_NAME"
+cm="$GIT_COMMITTER_EMAIL"
+
+if [ "$GIT_COMMITTER_EMAIL" = "$FROM_EMAIL" ]
+then
+    cn="Benny Wong"
+    cm="$TO_EMAIL"
+fi
+if [ "$GIT_AUTHOR_EMAIL" = "$FROM_EMAIL" ]
+then
+    an="Benny Wong"
+    am="$TO_EMAIL"
+fi
+
+export GIT_AUTHOR_NAME="$an"
+export GIT_AUTHOR_EMAIL="$am"
+export GIT_COMMITTER_NAME="$cn"
+export GIT_COMMITTER_EMAIL="$cm"
+'
