@@ -27,7 +27,7 @@
   df = diff
   lg = log -p
   # via mwunsch http://forrst.com/posts/git_prettyI_set_an_alias_to_this_command_in_my_-mQ0
-  pretty = log --graph --pretty=format:'%C(yellow)%h %Cgreen%an%Creset (%ar): %s'
+  pretty = log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   prettyish = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [core]
   excludesfile = <HOME_DIR>/.gitignore
