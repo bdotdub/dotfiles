@@ -15,9 +15,10 @@ fi
 # General Stuff
 alias cl='clear'
 alias l='ls -al'
-alias t='touch tmp/restart.txt'
 alias j=jobs
+alias pip='curl "http://code.bwong.net/tools/ip.php?f=plain" && echo'
 alias scrd='screen -rd'
+alias t='touch tmp/restart.txt'
 
 # Vim
 alias v=vi
