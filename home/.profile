@@ -1,9 +1,8 @@
 export EDITOR=vim
 export PAGER="less -s"
-export PS1="\h:\W\$(__git_ps1) \u\$ "
+export PS1="\h:\W\$(__git_ps1) \u\$ " # Format looks like: "hostname:SomeDir benny$ "
 
 BOX=`uname`
-
 if [ $BOX == "Darwin" ]
 then
   alias ls='ls -G'
@@ -13,7 +12,7 @@ else
 fi
 
 # General Stuff
-alias cl='clear'
+# alias cl='clear' - Use command+k
 alias l='ls -al'
 alias j=jobs
 alias pip='curl "http://code.bwong.net/tools/ip.php?f=plain" && echo'
@@ -35,7 +34,6 @@ alias gri='grep -ri'
 alias gv='grep -v'
 alias gh='history | grep'
 alias findps='ps aux | grep'
-alias stash_and_pull='git stash && git pull && git stash pop'
 
 # Misc
 alias whatsmyip='curl "http://code.bwong.net/tools/ip.php?f=plain" && echo'
@@ -59,8 +57,11 @@ if [ -n `which git` ]; then
   alias gstash='git stash'
 
   alias clone='git clone'
+  alias stash_and_pull='git stash && git pull && git stash pop'
 fi
 
+# Create aliases for easy dev folders, ie.
+# $ devruby # will cd into ~/Development/ruby
 if [ -d ~/Development ]; then
   alias dev="cd $HOME/Development"
   for type in `ls $HOME/Development`; do
@@ -72,6 +73,8 @@ if [ -d ~/Development ]; then
   done
 fi
 
+# This allows for custom env config stuff that is not
+# checked into source control
 if [ -d ~/.custom ]; then
   for i in ~/.custom/*;
     do source $i;
