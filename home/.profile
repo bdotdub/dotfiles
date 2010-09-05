@@ -23,7 +23,7 @@ alias t='touch tmp/restart.txt'
 # Vim
 alias v=vi
 alias :e=vi
-if [ -d /Applications/MacVim.app/Contents/MacOS/Vim ]; then
+if [ -e /Applications/MacVim.app/Contents/MacOS/Vim ]; then
   alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
   alias vi=/Applications/MacVim.app/Contents/MacOS/Vim
 fi
