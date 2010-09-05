@@ -23,6 +23,10 @@ alias t='touch tmp/restart.txt'
 # Vim
 alias v=vi
 alias :e=vi
+if [ -d /Applications/MacVim.app/Contents/MacOS/Vim ]; then
+  alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
+  alias vi=/Applications/MacVim.app/Contents/MacOS/Vim
+fi
 
 # Grep Soda
 alias gi='grep -i'
@@ -31,6 +35,7 @@ alias gri='grep -ri'
 alias gv='grep -v'
 alias gh='history | grep'
 alias findps='ps aux | grep'
+alias stash_and_pull='git stash && git pull && git stash pop'
 
 # Misc
 alias whatsmyip='curl "http://code.bwong.net/tools/ip.php?f=plain" && echo'
