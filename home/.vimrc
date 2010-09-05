@@ -80,13 +80,13 @@ map :W :w<cr>
 
 "Changing directory to match current buffer
 "START
-function! CHANGE_CURR_DIR()
-  let _dir = escape(expand("%:p:h"), " ")
-  exec "cd " . _dir
-  unlet _dir
-endfunction
-
-autocmd BufEnter * call CHANGE_CURR_DIR()
+"function! CHANGE_CURR_DIR()
+"  let _dir = escape(expand("%:p:h"), " ")
+"  exec "cd " . _dir
+"  unlet _dir
+"endfunction
+"
+"autocmd BufEnter * call CHANGE_CURR_DIR()
 "END
 
 "Escape from insert mode
