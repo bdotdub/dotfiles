@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+class Gri
+
+  attr_accessor :search_term
+  attr_accessor :location
+
+  def self.usage
+    puts "Usage: gri [search_term] [location]"
+    exit 1
+  end
+
+  def search
+    `find #{@location} | grep -ri #{@search_term}`.split("\n")
+  end
+
+end
+
+if ARGV.length != 2
+  Gri.usage
+end
+
+gri = Gri.new
+gri.search_term, gri.location = ARGV
+
+results = gri.search
+results.each_with_index do |result, counter|
+  puts "#{counter} :: #{result}"
+end
+
+print "Please select a result: "
+choice = STDIN.gets.strip
+if !choice.nil? && choice != "" && !(choice =~ /^[0-9]+$/).nil? && choice.to_i < results.length
+  result = results[choice.to_i].strip
+  puts "\nCopying \"#{result}\" to clipboard\n\n"
+  system("echo #{result} | pbcopy")
+end
