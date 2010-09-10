@@ -80,3 +80,10 @@ if [ -d ~/.custom ]; then
     do source $i;
   done
 fi
+
+if [ -d ~/.bin ]; then
+  export PATH="$PATH:~/.bin"
+  if [ -d ~/.bin/.custom ]; then
+    export PATH="$PATH:~/.bin/.custom"
+  fi
+fi
