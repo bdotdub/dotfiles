@@ -15,7 +15,7 @@ set ignorecase
 set incsearch
 set smartcase
 set list
-set listchars=trail:*
+set listchars=trail:.
 
 :hi Search guibg=LightBlue
 :hi Search ctermbg=LightGrey
@@ -44,6 +44,7 @@ set wildmenu
 set nocp
 set backspace=indent,eol,start
 set laststatus=2
+set noeol
 
 " Other useful tips: http://items.sjbach.com/319/configuring-vim-right
 set hidden
@@ -124,10 +125,18 @@ function! ClearExtraneousSpaces()
   :silent! %s/\s\+$//
 endfunction
 
+function! FixTabs()
+  :silent! %retab
+endfunction
+
+map <Leader><Space> :call ClearExtraneousSpaces()<CR>
+map <Leader><Tab> :call FixTabs()<CR>
+
+let g:syntastic_enable_signs=1
+
 map :bk :call Bk(1)
 map <leader>k :call Bk(1)<CR>
 map <leader>j :call BwongCloseBufferAndWindow()<CR>
-map <Leader><Tab> :call ClearExtraneousSpaces()<CR>
 
 " Minibufferexplorer config
 let g:miniBufExplMapWindowNavVim = 1
