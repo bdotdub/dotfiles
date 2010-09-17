@@ -4,3 +4,4 @@ mcabber/mcabber.state
 mcabber/logs/*
 home/.vim/swp
 home/.bin/.custom
+home/.vim/.netrwhist
