@@ -33,5 +33,5 @@ choice = STDIN.gets.strip
 if !choice.nil? && choice != "" && !(choice =~ /^[0-9]+$/).nil? && choice.to_i < results.length
   result = results[choice.to_i].strip
   puts "\nCopying \"#{result}\" to clipboard\n\n"
-  system("echo #{result.strip} | pbcopy")
+  system("echo -n #{result.strip} | pbcopy")
 end
