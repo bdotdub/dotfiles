@@ -60,6 +60,10 @@ if [ -n `which git` ]; then
   alias stash_and_pull='git stash && git pull && git stash pop'
 fi
 
+if [ -n `which git-achievements` ]; then
+  alias git='git-achievements'
+fi
+
 # Create aliases for easy dev folders, ie.
 # $ devruby # will cd into ~/Development/ruby
 if [ -d ~/Development ]; then
