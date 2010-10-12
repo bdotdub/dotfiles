@@ -11,11 +11,13 @@ au BufRead,BufNewFile Capfile setf ruby
 
 " Search
 set showmatch
-set ignorecase
-set incsearch
-set smartcase
-set list
-set listchars=trail:.
+set ignorecase  " Ignores the case for search
+set incsearch   " Incremental search
+set smartcase   " Will only search on case sensitive when upcase is used
+
+" Whitespace
+set list              " This will show hard tabs as ^I
+set listchars=trail:. " This will show trailing spaces with .
 
 :hi Search guibg=LightBlue
 :hi Search ctermbg=LightGrey
