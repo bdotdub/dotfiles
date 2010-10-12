@@ -64,6 +64,16 @@ if [ -n `which git-achievements` ]; then
   alias git='git-achievements'
 fi
 
+if [ -n `which aquamacs` ]; then
+  alias emacs='aquamacs'
+fi
+
+if [ -n `which cowsay` ]; then
+  alias cheesesay='cowsay -f cheese'
+  alias calfsay='cowsay -f small'
+  alias stegosaurussay='cowsay -f stegosaurus'
+fi
+
 # Create aliases for easy dev folders, ie.
 # $ devruby # will cd into ~/Development/ruby
 if [ -d ~/Development ]; then
