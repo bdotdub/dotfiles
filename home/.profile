@@ -7,6 +7,8 @@ if [ $BOX == "Darwin" ]
 then
   alias ls='ls -G'
   alias top='top -o cpu'
+  alias turn_spotlight_off='sudo mdutil -a -i off'
+  alias turn_spotlight_on='sudo mdutil -a -i on'
 else
   alias ls='ls --color=auto'
 fi
