@@ -17,7 +17,7 @@ set smartcase   " Will only search on case sensitive when upcase is used
 
 " Whitespace
 set list              " This will show hard tabs as ^I
-set listchars=trail:. " This will show trailing spaces with .
+set listchars=tab:▸\ ,trail:. " This will show trailing spaces with .
 
 :hi Search guibg=LightBlue
 :hi Search ctermbg=LightGrey
