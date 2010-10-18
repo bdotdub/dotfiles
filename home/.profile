@@ -1,6 +1,7 @@
 export EDITOR=vim
 export PAGER="less -s"
 export PS1="\h:\W\$(__git_ps1) \u\$ " # Format looks like: "hostname:SomeDir benny$ "
+export HISTFILESIZE=5000
 
 BOX=`uname`
 if [ $BOX == "Darwin" ]
