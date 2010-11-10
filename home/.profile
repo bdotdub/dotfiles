@@ -41,7 +41,8 @@ alias findps='ps aux | grep'
 # Misc
 alias whatsmyip='curl "http://code.bwong.net/tools/ip.php?f=plain" && echo'
 
-if [ -n `which git` ]; then
+which git>/dev/null 2>&1
+if [ $? -eq 0 ]; then
   # There must be a better way to do this
   alias g='git'
   alias ga='git add'
@@ -63,15 +64,18 @@ if [ -n `which git` ]; then
   alias stash_and_pull='git stash && git pull && git stash pop'
 fi
 
-if [ -n `which git-achievements` ]; then
+which git-achievements>/dev/null 2>&1
+if [ $? -eq 0 ]; then
   alias git='git-achievements'
 fi
 
-if [ -n `which aquamacs` ]; then
+which aquamacs>/dev/null 2>&1
+if [ $? -eq 0 ]; then
   alias emacs='aquamacs'
 fi
 
-if [ -n `which cowsay` ]; then
+which cowsay>/dev/null 2>&1
+if [ $? -eq 0 ]; then
   alias cheesesay='cowsay -f cheese'
   alias calfsay='cowsay -f small'
   alias stegosaurussay='cowsay -f stegosaurus'
