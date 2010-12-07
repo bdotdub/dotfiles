@@ -2,6 +2,7 @@
 <title>Benny Wong's Git Achievements</title>
 <description></description>
 <link></link>
+<item><title>Seamstress (Level 4)</title><description>amended a commit with git commit --amend.</description></item>
 <item><title>Apprentice Chimney Sweeper (Level 2)</title><description>Used git gc to run a number of housekeeping tasks on the current repository.</description></item>
 <item><title>Master Stone Mason (Level 9)</title><description>Added files to the index area for inclusion in the next commit with git add</description></item>
 <item><title>Apprentice Blacksmith (Level 1)</title><description>Created a branch using git checkout -b.</description></item>
@@ -21,5 +22,4 @@
 <item><title>Apprentice Investigator (Level 3)</title><description>Used git blame to annotates a file with information about how each line changed.</description></item>
 <item><title>Apprentice Seamstress (Level 1)</title><description>amended a commit with git commit --amend.</description></item>
 <item><title>Apprentice Butcher (Level 3)</title><description>Performed an interactive rebase using git rebase -i.</description></item>
-<item><title>Historian (Level 6)</title><description>Investigate the commit log using git log.</description></item>
 </channel></rss>
