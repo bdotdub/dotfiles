@@ -6,6 +6,7 @@ export HISTFILESIZE=5000
 BOX=`uname`
 if [ $BOX == "Darwin" ]
 then
+  alias flush_dns='dscacheutil -flushcache'
   alias ls='ls -G'
   alias top='top -o cpu'
   alias turn_spotlight_off='sudo mdutil -a -i off'
