@@ -34,6 +34,8 @@ set shiftwidth=2
 set autoindent
 set smartindent
 
+autocmd FileType javascript setlocal ts=4 shiftwidth=4 tabstop=4
+
 " Line numbers
 set ruler
 set number
