@@ -55,6 +55,7 @@ if [ $? -eq 0 ]; then
   alias gl='git log'
   alias gpush='git push'
   alias gpl='git pull --rebase'
+  alias gpom='git push origin master'
   alias gpr='git pretty'
   alias gpull='git pull'
   alias grb='git rebase'
