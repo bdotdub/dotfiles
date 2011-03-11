@@ -142,8 +142,8 @@ map <Leader><Tab> :call FixTabs()<CR>
 let g:syntastic_enable_signs=1
 
 map :bk :call Bk(1)
-map <leader>k :call Bk(1)<CR>
-map <leader>j :call BwongCloseBufferAndWindow()<CR>
+map <leader>j :call Bk(1)<CR>
+map <leader>k :call BwongCloseBufferAndWindow()<CR>
 
 " Minibufferexplorer config
 let g:miniBufExplMapWindowNavVim = 1
