@@ -115,3 +115,19 @@ if [ -d ~/.bin ]; then
     export PATH="$PATH:~/.bin/.custom"
   fi
 fi
+
+function up() { # cd to root of repository
+  old_pwd="$PWD";
+  while [ 1 ]; do
+    cd ..
+    if [ "$PWD" == "/" ]; then
+      cd "$old_pwd"
+      return 1
+    fi
+    for repo in ".git" ".hg"; do
+      if [ -d "$repo" ]; then
+        return 0;
+      fi
+    done
+  done
+}
