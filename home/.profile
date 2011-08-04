@@ -101,6 +101,8 @@ if [ -d ~/Development ]; then
   done
 fi
 
+[[ -s "/Users/benny/.rvm/scripts/rvm" ]] && source "/Users/benny/.rvm/scripts/rvm"
+
 # This allows for custom env config stuff that is not
 # checked into source control
 if [ -d ~/.custom ]; then
