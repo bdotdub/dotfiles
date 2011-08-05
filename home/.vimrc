@@ -34,6 +34,9 @@ set shiftwidth=2
 set autoindent
 set smartindent
 
+" Prevent lines start with # from removing the indent
+:inoremap # X<BS>#
+
 autocmd FileType javascript setlocal ts=4 shiftwidth=4 tabstop=4
 
 " Line numbers
