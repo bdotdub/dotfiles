@@ -1,0 +1,5 @@
+alias rcon='script/rails console'
+alias rserv='script/rails server'
+alias rgen='script/rails generate'
+alias rmigration='script/rails generate migration'
+alias rmigrate='bundle exec rake db:migrate'
