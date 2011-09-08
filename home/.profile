@@ -133,3 +133,5 @@ function up() { # cd to root of repository
     done
   done
 }
+
+# set -o vi
