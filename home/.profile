@@ -102,6 +102,7 @@ if [ -d ~/Development ]; then
 fi
 
 [[ -s "/Users/benny/.rvm/scripts/rvm" ]] && source "/Users/benny/.rvm/scripts/rvm"
+[[ -s "/home/benny/.rvm/scripts/rvm" ]] && source "/home/benny/.rvm/scripts/rvm"
 
 # This allows for custom env config stuff that is not
 # checked into source control
