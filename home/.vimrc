@@ -57,6 +57,7 @@ set laststatus=2
 set noeol
 
 " Other useful tips: http://items.sjbach.com/319/configuring-vim-right
+" hidden
 set hidden
 set history=1000
 set so=2
@@ -64,7 +65,7 @@ set so=2
 nnoremap ' `
 nnoremap ` '
 
-let mapleader="'"
+let mapleader=","
 
 set backupdir=~/.vim/swp
 set directory=~/.vim/swp

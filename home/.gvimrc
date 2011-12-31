@@ -1,4 +1,5 @@
-colorscheme candycode
+" colorscheme candycode
+colorscheme vividchalk
 
 " MacVim
 if has("gui_macvim")
@@ -14,3 +15,4 @@ set lines=50
 set guioptions-=r
 set guioptions-=L
 
+set guifont=Menlo:h18
