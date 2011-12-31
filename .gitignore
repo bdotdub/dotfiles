@@ -2,7 +2,7 @@ irb/*
 mcabber/mcabberrc
 mcabber/mcabber.state
 mcabber/logs/*
-home/.vim/swp
+old/.vim/swp
 home/.bin/.custom
 home/.vim/.netrwhist
 home/.custom/*

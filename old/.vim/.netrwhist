@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/benny/.rvm/gems/ruby-1.9.2-p290@foursquareand7yearsago/gems/draper-0.9.3'
+let g:netrw_dirhist_2='/Users/benny/.rvm/gems/ruby-1.9.2-p290@foursquareand7yearsago/bundler/gems/draper-d72f2a1ee885'
+let g:netrw_dirhist_3='/Users/benny/.rvm/gems/ruby-1.9.2-p290@foursquareand7yearsago/gems/restful_metrics-1.0.1'
+let g:netrw_dirhist_4='/Users/benny/.rvm/gems/ruby-1.9.2-p290@dejayou/gems/premailer-1.7.3'
+let g:netrw_dirhist_5='/Users/benny/.rvm/gems/ruby-1.9.2-p290@dejayou/gems/railties-3.1.1'
+let g:netrw_dirhist_6='/Users/benny/Development/javascript/tweet_chatter/node_modules'
+let g:netrw_dirhist_7='/Users/benny/.rvm/gems/ruby-1.9.2-p290/gems/mixpanel-1.0.0'
