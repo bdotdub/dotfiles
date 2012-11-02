@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'ftools'
+require 'fileutils'
 
 repo_dir      = File.expand_path(File.dirname(__FILE__))
 home_dir      = ENV['HOME']
@@ -23,7 +23,7 @@ Dir.glob('.*').each do |config_file|
     else
       Dir.mkdir config_backup unless File.exists?(config_backup)
       puts "Moving file from #{dot_config_file_full_path} to #{File.join(config_backup, config_file)}"
-      File.move dot_config_file_full_path, File.join(config_backup, dot_config_file)
+      FileUtils.move dot_config_file_full_path, File.join(config_backup, dot_config_file)
     end
   end
 
@@ -36,10 +36,10 @@ Dir.chdir File.join repo_dir, 'vim-config'
 
 repo_vim = File.join repo_dir, 'vim-config'
 home_vim = File.join home_dir, '.vim'
-File.move home_vim, File.join(config_backup, '.vim') if File.exists?(home_vim) && !File.identical?(repo_vim, home_vim)
+FileUtils.move home_vim, File.join(config_backup, '.vim') if File.exists?(home_vim) && !File.identical?(repo_vim, home_vim)
 File.symlink repo_vim, home_vim
 
 repo_vimrc = File.join repo_dir, 'vim-config', 'vimrc'
 home_vimrc = File.join home_dir, '.vimrc'
-File.move home_vimrc, File.join(config_backup, '.vimrc') if File.exists?(home_vimrc) && !File.identical?(repo_vimrc, home_vimrc)
+FileUtils.move home_vimrc, File.join(config_backup, '.vimrc') if File.exists?(home_vimrc) && !File.identical?(repo_vimrc, home_vimrc)
 File.symlink repo_vimrc, home_vimrc
