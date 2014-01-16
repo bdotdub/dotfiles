@@ -1,0 +1,7 @@
+---
+
+- name: Install ntp
+  apt: pkg=ntp state=latest update_cache=yes
+
+- name: Add ntp conf
+  copy: src=ntp.conf dest=/etc/ntp.conf

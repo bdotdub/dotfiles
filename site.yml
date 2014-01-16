@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  user: root
+  roles:
+    - role: base
+
+- hosts: all
+  user: benny
+  roles:
+    - role: vim

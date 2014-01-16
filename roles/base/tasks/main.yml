@@ -1,0 +1,14 @@
+---
+
+- name: Add benny
+  user: name=benny group=benny createhome=yes shell=/bin/bash state=present
+
+- name: Set current hostname
+  command: hostname {{ hostname }}
+  when: hostname is defined and ansible_hostname != hostname
+
+- name: Set hostname file
+  copy: "content={{ hostname }} dest=/etc/hostname"
+  when: hostname is defined
+
+- include: ntp.yml
