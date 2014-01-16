@@ -1,0 +1,6 @@
+---
+- name: Add irbrc
+  copy: src=ircrb dest=~benny/.irbrc
+
+- name: Add gemrc
+  copy: src=gemrc dest=~benny/.gemrc

@@ -1,5 +1,4 @@
 ---
-
 - name: Add benny
   user: name=benny group=benny createhome=yes shell=/bin/bash state=present
 

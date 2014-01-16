@@ -1,4 +1,4 @@
-require 'irb/completion'
+require "irb/completion"
 
 # Require custom irbrc
 custom_irbrc = File.join(File.dirname(__FILE__), '.irb')

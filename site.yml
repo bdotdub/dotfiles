@@ -8,4 +8,4 @@
 - hosts: all
   user: benny
   roles:
-    - role: vim
+    - role: ruby
