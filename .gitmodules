@@ -1,0 +1,3 @@
+[submodule "vim/vim.symlink"]
+	path = vim/vim.symlink
+	url = https://github.com/timehop/vim-config.git
