@@ -1,4 +1,0 @@
-#!/bin/sh
-
-git config --add user.name  "Benny Wong"
-git config --add user.email "benny@bwong.net"

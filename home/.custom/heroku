@@ -1,3 +1,0 @@
-alias hcon='heroku console'
-alias hlogs='heroku logs --tail'
-alias hmigrate='heroku rake db:migrate'
