@@ -1,6 +1,6 @@
 [user]
-  email = <EMAIL_ADDRESS>
-  name = Benny Wong
+  email = AUTHOREMAIL
+  name = AUTHORNAME
 [github]
   user = bdotdub
   token = <TOKEN>

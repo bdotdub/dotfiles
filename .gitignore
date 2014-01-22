@@ -1,8 +1,1 @@
-irb/*
-mcabber/mcabberrc
-mcabber/mcabber.state
-mcabber/logs/*
-old/.vim/swp
-home/.bin/.custom
-home/.vim/.netrwhist
-home/.custom/*
+git/gitconfig.symlink
